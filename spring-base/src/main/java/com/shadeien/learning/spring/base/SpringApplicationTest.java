@@ -8,7 +8,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @SpringBootApplication(scanBasePackages = "com.shadeien.learning.spring.base")
-@EnableAspectJAutoProxy
+@EnableAspectJAutoProxy(exposeProxy = true)
 public class SpringApplicationTest {
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(SpringApplicationTest.class, args);

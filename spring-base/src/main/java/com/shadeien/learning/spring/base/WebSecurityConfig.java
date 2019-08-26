@@ -22,9 +22,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity web) throws Exception {
         web.authorizeRequests()
                 // inde.html对应的url允许所任人访问
-                .antMatchers("/").permitAll()
+                .antMatchers("/**").permitAll()
                 // user.html对应的url，则需要用户有USER的角色才可以访问
-                .antMatchers("/user").hasRole("USER")
+//                .antMatchers("/user").hasRole("USER")
                 .and()
                 .formLogin();
     }
