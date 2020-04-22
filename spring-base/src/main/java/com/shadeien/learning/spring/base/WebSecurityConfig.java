@@ -26,6 +26,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // user.html对应的url，则需要用户有USER的角色才可以访问
 //                .antMatchers("/user").hasRole("USER")
                 .and()
-                .formLogin();
+                .formLogin()
+                .and().csrf().disable()
+                ;
     }
 }

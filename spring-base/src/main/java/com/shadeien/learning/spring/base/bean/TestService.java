@@ -1,15 +1,19 @@
 package com.shadeien.learning.spring.base.bean;
 
+import com.shadeien.learning.spring.base.TestAnnotation;
+import com.shadeien.learning.spring.base.jpa.entity.DeviceInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-@Component
+@Service
 public class TestService {
     @Autowired
     Set<BeanInterface> beanSet;
@@ -32,7 +36,10 @@ public class TestService {
         System.out.println("destroy");
     }
 
+    @TestAnnotation(name = "annotated")
+    public void testAnnotation(HashMap<String, String> map, DeviceInfo deviceInfo) {
 
+    }
 
     public void sayHello() {
         System.out.println("service hello"+depend);

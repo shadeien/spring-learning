@@ -17,6 +17,16 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.reflections/reflections-maven -->
+        <dependency>
+            <groupId>org.reflections</groupId>
+            <artifactId>reflections-maven</artifactId>
+            <version>0.9.9-RC2</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
